@@ -1,0 +1,284 @@
+header{
+    text-align: center;
+   margin-bottom: 5px;
+  
+    
+    color:#fff;
+  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f7002d;
+}
+
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 60px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+} 
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+.card .face .titleCartelera{
+    color: yellow;
+    font-size: 25px;
+    
+}
+.card .face .titleEstreno{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+     
+}
+/* Estilos de la barra de navegaci�n */
+/*****Estilos modificados*/
+.navegacion {
+    width: 100%;
+    padding-bottom:5px;
+}
+
+    .navegacion nav {
+        max-width: 100%;
+        background: #2D3447;
+        margin: 0 auto;
+        font-size:25px;
+    }
+
+/******************************************/
+
+.navegacion nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+            .navegacion nav ul li {
+                position: relative;
+                
+            }
+
+                .navegacion nav ul li a {
+                    color: #fff;
+                    text-decoration: none;
+                    display: block;
+                    padding: 20px;
+                  margin-left: auto;
+                  margin-right: auto;
+                }
+
+                    .navegacion nav ul li a span {
+                        font-size: 20px;
+                        position: absolute;
+                        bottom: -8px;
+                        display: none;
+                    }
+
+                .navegacion nav ul li:hover span {
+                    display: block;
+                }
+
+                .navegacion nav ul li .submenu {
+                    background: #fff;
+                    padding: 20px;
+                    position: absolute;
+                    display: none;
+                    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.24);
+                }
+
+                .navegacion nav ul li:hover .submenu {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                }
+
+                .navegacion nav ul li .submenu .submenu-items {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                    .navegacion nav ul li .submenu .submenu-items p {
+                        font-weight: 600;
+                        display: block;
+                        padding-bottom: 5px;
+                        margin-bottom: 10px;
+                    }
+
+
+
+
+
+
+
+
+
+                    /* ... (código anterior) ... */
+
+/* Estilos de la barra de navegación */
+.navegacion {
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.navegacion nav {
+    max-width: 100%;
+    background: #2D3447;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+.navegacion nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap; /* Añadido para que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.navegacion nav ul li {
+    position: relative;
+    flex-grow: 1; /* Añadido para que los elementos ocupen todo el ancho disponible */
+    flex-basis: 0; /* Añadido para que los elementos ocupen todo el ancho disponible */
+    max-width: 100%; /* Añadido para manejar mejor el ancho en pantallas pequeñas */
+}
+
+.navegacion nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navegacion nav ul li a span {
+    font-size: 20px;
+    position: absolute;
+    bottom: -8px;
+    display: none;
+}
+
+.navegacion nav ul li:hover span {
+    display: block;
+}
+
+.navegacion nav ul li .submenu {
+    background: #fff;
+    padding: 20px;
+    position: absolute;
+    display: none;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.24);
+}
+
+.navegacion nav ul li:hover .submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.navegacion nav ul li .submenu .submenu-items {
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion nav ul li .submenu .submenu-items p {
+    font-weight: 600;
+    display: block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navegacion nav ul {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .navegacion nav ul li {
+        width: 100%;
+    }
+}
